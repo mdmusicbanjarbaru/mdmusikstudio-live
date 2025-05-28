@@ -52,6 +52,9 @@
       font-size: 1.3em;
       margin-bottom: 1.2em;
     }
+    .jam-container {
+      margin-top: 25px;
+    }
     .jam-digital-atas {
       font-size: 2em;
       font-family: 'Courier New', monospace;
@@ -60,9 +63,15 @@
       display: inline-block;
       padding: 10px 20px;
       border-radius: 10px;
-      margin-top: 15px;
       box-shadow: 0 0 15px #00ff5e;
       letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    .jam-buka {
+      color: #00ff5e;
+      font-weight: bold;
+      font-size: 1em;
+      margin-top: 10px;
     }
     .button {
       background: #00ff5e;
@@ -73,6 +82,8 @@
       font-size: 1.1em;
       border-radius: 10px;
       transition: background 0.3s ease;
+      display: inline-block;
+      margin-top: 15px;
     }
     .button:hover {
       background: #00cc4a;
@@ -160,8 +171,10 @@
     <h1>MD.Musik Studio</h1>
     <p>Studio musik dan rental ruang latihan di Banjarbaru, Kalimantan Selatan</p>
     <a href="https://wa.me/62882020305797" class="button" target="_blank">Booking Sekarang via WhatsApp</a>
-    <div class="jam-digital-atas" id="jam-digital-atas"></div>
-    <p style="color: #00ff5e; font-weight: bold;">Jam buka: Setiap hari, 08.00 – 23.00 WITA</p>
+    <div class="jam-container">
+      <div class="jam-digital-atas" id="jam-digital-atas"></div>
+      <div class="jam-buka">Jam buka: Setiap hari, 08.00 – 23.00 WITA</div>
+    </div>
   </div>
 
   <div class="section services">
