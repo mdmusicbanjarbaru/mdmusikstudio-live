@@ -6,7 +6,6 @@
   <title>MD.Musik Studio - Banjarbaru</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Open+Sans&display=swap');
-    
     body {
       font-family: 'Open Sans', sans-serif;
       margin: 0;
@@ -93,9 +92,35 @@
       transform: scale(1.05);
       background: #333;
     }
-    iframe {
-      border-radius: 12px;
-      margin-top: 10px;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .price-table {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .price-table table {
+      width: 100%;
+      border-collapse: collapse;
+      color: white;
+    }
+    .price-table th, .price-table td {
+      border: 1px solid #444;
+      padding: 10px;
+      text-align: center;
     }
     .footer {
       background: #111;
@@ -109,6 +134,28 @@
       margin: 0 10px;
       text-decoration: none;
       font-size: 1.3em;
+    }
+    .form-booking {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .form-booking input, .form-booking textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+    }
+    .form-booking button {
+      background: #00ff5e;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
     }
   </style>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -129,6 +176,39 @@
       <li>🕒 Sewa Harian / Per Jam</li>
       <li>🎓 Latihan Gitar untuk Anak Sekolah</li>
     </ul>
+  </div>
+
+  <div class="section">
+    <h2>Galeri Studio</h2>
+    <div class="gallery">
+      <img src="https://source.unsplash.com/400x300/?music,studio" alt="Studio 1">
+      <img src="https://source.unsplash.com/400x300/?guitar,practice" alt="Studio 2">
+      <img src="https://source.unsplash.com/400x300/?band,room" alt="Studio 3">
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Harga Sewa</h2>
+    <div class="price-table">
+      <table>
+        <tr><th>Jenis Sewa</th><th>Harga</th></tr>
+        <tr><td>Ruang Latihan per Jam</td><td>Rp 50.000</td></tr>
+        <tr><td>Ruang Latihan per Hari</td><td>Rp 300.000</td></tr>
+        <tr><td>Rental Alat Musik</td><td>Mulai Rp 25.000</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Form Booking</h2>
+    <div class="form-booking">
+      <form action="https://wa.me/62882020305797" method="get" target="_blank">
+        <input type="text" name="name" placeholder="Nama Anda" required>
+        <input type="text" name="jadwal" placeholder="Jadwal yang Diinginkan" required>
+        <textarea name="pesan" rows="3" placeholder="Pesan Tambahan (opsional)"></textarea>
+        <button type="submit">Kirim ke WhatsApp</button>
+      </form>
+    </div>
   </div>
 
   <div class="section">
