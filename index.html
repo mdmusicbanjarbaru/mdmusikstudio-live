@@ -181,7 +181,7 @@
 </head>
 <body>
   <button class="audio-toggle" onclick="toggleAudio()">🔊</button>
-  <audio id="bg-music" src="Suara Ceria di MD Music 1.mp3" autoplay loop></audio>
+  <audio id="bg-music" src="suara-ceria-md-music.mp3" autoplay loop></audio>
   <div class="hero">
     <img src="assets/md-logo.png" alt="Logo MD.Musik Studio" class="logo" />
     <h1>MD.Musik Studio</h1>
@@ -261,7 +261,6 @@
       const elAtas = document.getElementById("jam-digital-atas");
       if (elAtas) elAtas.textContent = "Sekarang: " + jamLengkap;
     }
-
     setInterval(tampilkanJam, 1000);
     tampilkanJam();
 
