@@ -156,9 +156,13 @@
     }
     .footer-icons a {
       color: #00ff5e;
-      margin: 0 10px;
+      margin: 0 20px;
       text-decoration: none;
-      font-size: 1.3em;
+      font-size: 2.6em; /* DIBESARKAN LAGI */
+      transition: transform 0.3s ease;
+    }
+    .footer-icons a:hover {
+      transform: scale(1.2);
     }
     form input {
       width: 100%;
@@ -181,7 +185,7 @@
 </head>
 <body>
   <button class="audio-toggle" onclick="toggleAudio()">🔊</button>
-  <audio id="bg-music" src="assets/audio/suara-ceria-md-music.mp3" autoplay loop></audio>
+  <audio id="bg-music" src="suara-ceria-md-music.mp3" autoplay loop></audio>
   <div class="hero">
     <img src="assets/md-logo.png" alt="Logo MD.Musik Studio" class="logo" />
     <h1>MD.Musik Studio</h1>
@@ -251,6 +255,7 @@
       return false;
     }
 
+    // Jam digital
     function tampilkanJam() {
       const now = new Date();
       const jam = String(now.getHours()).padStart(2, '0');
@@ -263,6 +268,7 @@
     setInterval(tampilkanJam, 1000);
     tampilkanJam();
 
+    // Toggle musik
     function toggleAudio() {
       const audio = document.getElementById("bg-music");
       const button = document.querySelector(".audio-toggle");
