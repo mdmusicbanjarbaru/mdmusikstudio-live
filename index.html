@@ -170,38 +170,12 @@
       padding: 10px;
       text-align: center;
     }
-    .footer {
-      background: #111;
-      text-align: center;
-      padding: 30px;
-      font-size: 0.9em;
-      color: #aaa;
-    }
-    .footer-icons a {
-      color: #00ff5e;
-      margin: 0 20px;
-      text-decoration: none;
-      font-size: 2.6em;
-      transition: transform 0.3s ease;
-    }
-    .footer-icons a:hover {
-      transform: scale(1.2);
-    }
-    form input {
+    iframe.map {
       width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 5px;
-      border: none;
-    }
-    form button {
-      background: #00ff5e;
-      color: black;
-      padding: 10px 20px;
-      border: none;
-      font-weight: bold;
-      border-radius: 5px;
-      cursor: pointer;
+      height: 400px;
+      border: 0;
+      margin-top: 40px;
+      border-radius: 12px;
     }
   </style>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
@@ -224,6 +198,49 @@
       </div>
     </div>
   </div>
+
+  <div class="section">
+    <h2>Layanan Studio Kami</h2>
+    <div class="services">
+      <ul>
+        <li>Sewa ruang latihan musik</li>
+        <li>Rekaman vokal dan band</li>
+        <li>Mixing & Mastering</li>
+        <li>Paket recording murah</li>
+        <li>Studio akustik & full band</li>
+        <li>Ruangan ber-AC & soundproof</li>
+      </ul>
+    </div>
+
+    <div class="price-table">
+      <h2>Harga Sewa Studio</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Durasi</th>
+            <th>Harga</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1 Jam</td>
+            <td>Rp 50.000</td>
+          </tr>
+          <tr>
+            <td>2 Jam</td>
+            <td>Rp 90.000</td>
+          </tr>
+          <tr>
+            <td>3 Jam</td>
+            <td>Rp 130.000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7969.142291196113!2d114.84463292638284!3d-3.456105378332083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de681445aadf3c3%3A0x83c2f5127f6fc524!2sMD%20Musik%20Studio!5e0!3m2!1sid!2sid!4v1706172406470!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
   <script>
     function updateJamDigital() {
       const jamEl = document.getElementById("jam-digital-atas");
