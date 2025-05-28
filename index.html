@@ -52,6 +52,11 @@
       font-size: 1.3em;
       margin-bottom: 1.2em;
     }
+    .jam-digital-atas {
+      font-size: 1.2em;
+      color: #00ff5e;
+      margin-top: 15px;
+    }
     .button {
       background: #00ff5e;
       color: black;
@@ -148,6 +153,7 @@
     <h1>MD.Musik Studio</h1>
     <p>Studio musik dan rental ruang latihan di Banjarbaru, Kalimantan Selatan</p>
     <a href="https://wa.me/62882020305797" class="button" target="_blank">Booking Sekarang via WhatsApp</a>
+    <div class="jam-digital-atas" id="jam-digital-atas"></div>
   </div>
 
   <div class="section services">
@@ -193,7 +199,6 @@
 
   <div class="footer">
     <p><strong>Jam buka:</strong> Setiap hari, 08.00 – 23.00 WITA</p>
-    <p id="jam-digital" style="margin-top: 10px; font-size: 1.2em; color: #00ff5e;"></p>
     <p>
       <a href="https://instagram.com/md_music_banjarbaru" target="_blank" class="footer-icons"><i class="fab fa-instagram"></i></a>
       <a href="https://www.youtube.com/@mdmusicbanjarbaru" target="_blank" class="footer-icons"><i class="fab fa-youtube"></i></a>
@@ -217,7 +222,8 @@
       const menit = String(now.getMinutes()).padStart(2, '0');
       const detik = String(now.getSeconds()).padStart(2, '0');
       const jamLengkap = `${jam}:${menit}:${detik} WITA`;
-      document.getElementById("jam-digital").textContent = "Sekarang: " + jamLengkap;
+      const elAtas = document.getElementById("jam-digital-atas");
+      if (elAtas) elAtas.textContent = "Sekarang: " + jamLengkap;
     }
 
     setInterval(tampilkanJam, 1000);
