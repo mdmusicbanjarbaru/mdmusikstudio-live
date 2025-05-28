@@ -193,6 +193,7 @@
 
   <div class="footer">
     <p><strong>Jam buka:</strong> Setiap hari, 08.00 – 23.00 WITA</p>
+    <p id="jam-digital" style="margin-top: 10px; font-size: 1.2em; color: #00ff5e;"></p>
     <p>
       <a href="https://instagram.com/md_music_banjarbaru" target="_blank" class="footer-icons"><i class="fab fa-instagram"></i></a>
       <a href="https://www.youtube.com/@mdmusicbanjarbaru" target="_blank" class="footer-icons"><i class="fab fa-youtube"></i></a>
@@ -208,6 +209,19 @@
       window.open(`https://wa.me/62882020305797?text=${encodeURIComponent(pesan)}`);
       return false;
     }
+
+    // Jam digital
+    function tampilkanJam() {
+      const now = new Date();
+      const jam = String(now.getHours()).padStart(2, '0');
+      const menit = String(now.getMinutes()).padStart(2, '0');
+      const detik = String(now.getSeconds()).padStart(2, '0');
+      const jamLengkap = `${jam}:${menit}:${detik} WITA`;
+      document.getElementById("jam-digital").textContent = "Sekarang: " + jamLengkap;
+    }
+
+    setInterval(tampilkanJam, 1000);
+    tampilkanJam();
   </script>
 </body>
 </html>
