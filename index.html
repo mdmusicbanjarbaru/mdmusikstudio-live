@@ -111,7 +111,7 @@
       background: #222;
       padding: 20px;
       border-radius: 10px;
-      margin-top: 20px;
+      margin-top: 40px;
     }
     .price-table table {
       width: 100%;
@@ -136,20 +136,14 @@
       text-decoration: none;
       font-size: 1.3em;
     }
-    .form-booking {
-      background: #222;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 20px;
-    }
-    .form-booking input, .form-booking textarea {
+    form input {
       width: 100%;
       padding: 10px;
-      margin: 10px 0;
+      margin-bottom: 10px;
       border-radius: 5px;
       border: none;
     }
-    .form-booking button {
+    form button {
       background: #00ff5e;
       color: black;
       padding: 10px 20px;
@@ -163,12 +157,78 @@
 </head>
 <body>
   <div class="hero">
-    <img src="assets/md-logo.png.png" alt="Logo MD.Musik Studio" class="logo" />
+    <img src="assets/md-logo.png" alt="Logo MD.Musik Studio" class="logo" />
     <h1>MD.Musik Studio</h1>
     <p>Studio musik dan rental ruang latihan di Banjarbaru, Kalimantan Selatan</p>
     <a href="https://wa.me/62882020305797" class="button" target="_blank">Booking Sekarang via WhatsApp</a>
   </div>
 
-  <!-- Konten lainnya tetap sama -->
+  <div class="section services">
+    <h2>Layanan Studio Kami</h2>
+    <ul>
+      <li>Sewa Ruang Latihan</li>
+      <li>Rental Alat Musik</li>
+      <li>Latihan Gitar</li>
+    </ul>
+  </div>
+
+  <div class="section price-table">
+    <h2>Harga Sewa</h2>
+    <table>
+      <tr><th>Layanan</th><th>Durasi</th><th>Harga</th></tr>
+      <tr><td>Ruang Latihan</td><td>Per Jam</td><td>Rp 50.000</td></tr>
+      <tr><td>Ruang Latihan</td><td>09.00–17.00 (harian)</td><td>Rp 300.000</td></tr>
+      <tr><td>Latihan Gitar</td><td>Per Sesi</td><td>Rp 40.000</td></tr>
+    </table>
+  </div>
+
+  <div class="section gallery">
+    <h2>Galeri Studio</h2>
+    <img src="https://source.unsplash.com/400x300/?music,studio" alt="Studio 1">
+    <img src="https://source.unsplash.com/400x300/?sound,mixer" alt="Mixer">
+    <img src="https://source.unsplash.com/400x300/?recording" alt="Recording">
+    <img src="https://source.unsplash.com/400x300/?guitar,amp" alt="Gitar dan Ampli">
+  </div>
+
+  <div class="section">
+    <h2>Booking Studio</h2>
+    <form action="https://wa.me/62882020305797" method="get" target="_blank" onsubmit="return kirimWA()">
+      <input type="text" id="nama" placeholder="Nama Anda" required>
+      <input type="text" id="jadwal" placeholder="Jadwal Booking (tgl/jam)" required>
+      <button type="submit">Kirim Booking via WA</button>
+    </form>
+  </div>
+
+  <div class="section">
+    <h2>Lokasi Studio</h2>
+    <p>MD.Musik Studio, Jl. Karang Rejo, Banjarbaru</p>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.5640983466477!2d114.8073062!3d-3.4459456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de68151f3b2dc68%3A0x83a0a7cf4ec0e6c2!2sMD%20Music%20Studio%20Banjarbaru!5e0!3m2!1sid!2sid!4v1716892039570" 
+      width="100%" 
+      height="450" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 MD.Musik Studio Banjarbaru</p>
+    <p>
+      <a href="https://instagram.com/md_music_banjarbaru" target="_blank" class="footer-icons"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/@mdmusikstudio" target="_blank" class="footer-icons"><i class="fab fa-youtube"></i></a>
+      <a href="https://tiktok.com/@mdmusikstudio" target="_blank" class="footer-icons"><i class="fab fa-tiktok"></i></a>
+    </p>
+  </div>
+
+  <script>
+    function kirimWA() {
+      const nama = document.getElementById("nama").value;
+      const jadwal = document.getElementById("jadwal").value;
+      const pesan = `Halo, saya ${nama} ingin booking studio pada: ${jadwal}`;
+      window.open(`https://wa.me/62882020305797?text=${encodeURIComponent(pesan)}`);
+      return false;
+    }
+  </script>
 </body>
 </html>
