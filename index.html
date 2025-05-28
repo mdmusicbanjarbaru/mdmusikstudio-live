@@ -181,7 +181,7 @@
 </head>
 <body>
   <button class="audio-toggle" onclick="toggleAudio()">🔊</button>
-  <audio id="bg-music" src="suara-ceria-md-music.mp3" autoplay loop></audio>
+  <audio id="bg-music" src="assets/audio/suara-ceria-md-music.mp3" autoplay loop></audio>
   <div class="hero">
     <img src="assets/md-logo.png" alt="Logo MD.Musik Studio" class="logo" />
     <h1>MD.Musik Studio</h1>
@@ -251,7 +251,6 @@
       return false;
     }
 
-    // Jam digital
     function tampilkanJam() {
       const now = new Date();
       const jam = String(now.getHours()).padStart(2, '0');
@@ -264,7 +263,6 @@
     setInterval(tampilkanJam, 1000);
     tampilkanJam();
 
-    // Toggle musik
     function toggleAudio() {
       const audio = document.getElementById("bg-music");
       const button = document.querySelector(".audio-toggle");
