@@ -180,7 +180,32 @@
     <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.5640983466477!2d114.8073062!3d-3.4459456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de68151f3b2dc68%3A0x83a0a7cf4ec0e6c2!2sMD%20Music%20Studio%20Banjarbaru!5e0!3m2!1sid!2sid!4v1716892039570" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 
-  <script>
+  <div class="section">
+    <h2>Galeri Foto Studio</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+      <img src="assets/studio1.jpg" alt="Studio 1" style="width: 280px; border-radius: 10px;">
+      <img src="assets/studio2.jpg" alt="Studio 2" style="width: 280px; border-radius: 10px;">
+      <img src="assets/studio3.jpg" alt="Studio 3" style="width: 280px; border-radius: 10px;">
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Testimoni Pelanggan</h2>
+    <blockquote style="font-style: italic; margin-bottom: 20px;">"Studio terbaik di Banjarbaru! Suara mantap, alat lengkap, dan nyaman banget." <br>– Riko, Banjarbaru</blockquote>
+    <blockquote style="font-style: italic;">"Anak saya senang ikut kursus gitar di sini. Gurunya ramah dan profesional." <br>– Ibu Nia</blockquote>
+  </div>
+
+  <div class="section">
+    <h2>Form Booking Online</h2>
+    <form action="https://wa.me/6288220823577" method="get" target="_blank" onsubmit="return kirimWA()">
+      <input type="text" id="nama" placeholder="Nama Anda" required style="width:100%;padding:10px;margin-bottom:10px;border-radius:5px;border:none;">
+      <input type="text" id="jadwal" placeholder="Tanggal & Jam Booking" required style="width:100%;padding:10px;margin-bottom:10px;border-radius:5px;border:none;">
+      <textarea id="catatan" placeholder="Catatan Tambahan" style="width:100%;padding:10px;margin-bottom:10px;border-radius:5px;border:none;"></textarea>
+      <button type="submit" style="background:#00ff5e;color:black;padding:10px 20px;border:none;font-weight:bold;border-radius:5px;cursor:pointer;">Kirim via WhatsApp</button>
+    </form>
+  </div>
+
+<script>
     function updateJam() {
       const now = new Date();
       const jam = now.getHours().toString().padStart(2, '0');
@@ -190,6 +215,15 @@
     }
     setInterval(updateJam, 1000);
     updateJam();
+
+    function kirimWA() {
+      const nama = document.getElementById('nama').value;
+      const jadwal = document.getElementById('jadwal').value;
+      const catatan = document.getElementById('catatan').value;
+      const pesan = `Halo, saya ${nama} ingin booking pada ${jadwal}. Catatan: ${catatan}`;
+      window.open(`https://wa.me/6288220823577?text=${encodeURIComponent(pesan)}`);
+      return false;
+    }
   </script>
 </body>
 </html>
