@@ -173,18 +173,17 @@
     </div>
   </div>
 
+  $1
+
   <div class="section">
-    <h2>Harga Sewa Studio & Kursus</h2>
-    <div class="price-table">
-      <table>
-        <tr><th>Layanan</th><th>Durasi</th><th>Harga</th></tr>
-        <tr><td>Sewa Studio</td><td>1 Jam</td><td>Rp 50.000</td></tr>
-        <tr><td>Sewa Studio</td><td>2 Jam</td><td>Rp 100.000 (bonus stik drum 1 pasang new)</td></tr>
-        <tr><td>Sewa Studio</td><td>1 Hari (09.00 – 17.00)</td><td>Rp 300.000 (bonus stik drum & air mineral)</td></tr>
-        <tr><td>Kursus Gitar</td><td>1x per minggu (4x sebulan)</td><td>Rp 250.000</td></tr>
-        <tr><td>Kursus Gitar untuk Pelajar</td><td>1x Pertemuan</td><td>Rp 40.000</td></tr>
-      </table>
-    </div>
+    <h2>Form Booking Online</h2>
+    <form action="https://wa.me/62882020305797" method="get" target="_blank" onsubmit="return kirimWA()">
+      <input type="text" id="nama" placeholder="Nama Anda" required style="width:100%;padding:10px;margin-bottom:10px;border-radius:5px;border:none;">
+      <input type="text" id="jadwal" placeholder="Tanggal & Jam Booking" required style="width:100%;padding:10px;margin-bottom:10px;border-radius:5px;border:none;">
+      <textarea id="catatan" placeholder="Catatan Tambahan" style="width:100%;padding:10px;margin-bottom:10px;border-radius:5px;border:none;"></textarea>
+      <button type="submit" style="background:#00ff5e;color:black;padding:10px 20px;border:none;font-weight:bold;border-radius:5px;cursor:pointer;">Kirim via WhatsApp</button>
+    </form>
+  </div>
   </div>
 
   <div class="section">
@@ -198,15 +197,7 @@
     <blockquote style="font-style: italic;">"Anak saya senang ikut kursus gitar di sini. Gurunya ramah dan profesional." <br>– Ibu Nia</blockquote>
   </div>
 
-  <div class="section">
-    <h2>Form Booking Online</h2>
-    <form action="https://wa.me/62882020305797" method="get" target="_blank" onsubmit="return kirimWA()">
-      <input type="text" id="nama" placeholder="Nama Anda" required style="width:100%;padding:10px;margin-bottom:10px;border-radius:5px;border:none;">
-      <input type="text" id="jadwal" placeholder="Tanggal & Jam Booking" required style="width:100%;padding:10px;margin-bottom:10px;border-radius:5px;border:none;">
-      <textarea id="catatan" placeholder="Catatan Tambahan" style="width:100%;padding:10px;margin-bottom:10px;border-radius:5px;border:none;"></textarea>
-      <button type="submit" style="background:#00ff5e;color:black;padding:10px 20px;border:none;font-weight:bold;border-radius:5px;cursor:pointer;">Kirim via WhatsApp</button>
-    </form>
-  </div>
+  
 
   <script>
     function updateJam() {
