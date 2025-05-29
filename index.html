@@ -188,6 +188,22 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+  <div class="hero">
+    <img src="assets/md-logo.png" alt="MD.Musik Studio" class="logo">
+    <h1>MD.Musik Studio</h1>
+    <p>MD Musik Banjarbaru, Kalimantan Selatan</p>
+    <a href="https://wa.me/6288220823577" class="button" target="_blank">Booking Sekarang via WhatsApp</a>
+    <div class="jam-container">
+      <div class="jam-digital-atas" id="jam">--:--:-- WITA</div>
+      <div class="jam-buka">Jam buka: Setiap hari, 08.00 – 23.00 WITA</div>
+    </div>
+    <div class="sosmed-icons">
+      <a href="https://www.instagram.com/mdmusikbanjarbaru" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@mdmusikstudio" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.tiktok.com/@mdmusikstudio" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+
   <div class="section">
     <h2>Layanan Studio Kami</h2>
     <div class="services">
@@ -211,5 +227,17 @@
 
     <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1993.9391918476712!2d114.84466218459143!3d-3.4437985101613636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de681c3b947225f%3A0x69eb94845e29a398!2sMD.Musik%20Studio!5e0!3m2!1sid!2sid!4v1685094363774!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
+
+  <script>
+    function updateJam() {
+      const now = new Date();
+      const jam = now.getHours().toString().padStart(2, '0');
+      const menit = now.getMinutes().toString().padStart(2, '0');
+      const detik = now.getSeconds().toString().padStart(2, '0');
+      document.getElementById("jam").textContent = jam + ":" + menit + ":" + detik + " WITA";
+    }
+    setInterval(updateJam, 1000);
+    updateJam();
+  </script>
 </body>
 </html>
