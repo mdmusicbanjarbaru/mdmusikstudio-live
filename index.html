@@ -151,26 +151,83 @@
   </style>
 </head>
 <body>
-<!-- Konten HTML kamu tetap di sini (hero, section, galeri, harga, form, peta, testimoni) -->
-<script>
-  function updateJam() {
-    const now = new Date();
-    const jam = now.getHours().toString().padStart(2, '0');
-    const menit = now.getMinutes().toString().padStart(2, '0');
-    const detik = now.getSeconds().toString().padStart(2, '0');
-    document.getElementById("jam").textContent = jam + ":" + menit + ":" + detik + " WITA";
-  }
-  setInterval(updateJam, 1000);
-  updateJam();
+  <div class="hero">
+    <img src="assets/md-logo.png" alt="MD.Musik Studio" class="logo">
+    <h1>MD.Musik Studio</h1>
+    <p>MD Musik Banjarbaru, Kalimantan Selatan</p>
+    <a href="https://wa.me/62882020305797" class="button" target="_blank">Booking Sekarang via WhatsApp</a>
+    <div class="jam-digital-atas" id="jam">--:--:-- WITA</div>
+    <div class="jam-buka">Jam buka: Setiap hari, 08.00 – 23.00 WITA</div>
+    <div class="sosmed-icons">
+      <a href="https://www.instagram.com/md_music_banjarbaru" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@mdmusicbanjarbaru" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.tiktok.com/@rudolvo01" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
 
-  function kirimWA() {
-    const nama = document.getElementById('nama').value;
-    const jadwal = document.getElementById('jadwal').value;
-    const catatan = document.getElementById('catatan').value;
-    const pesan = `Halo, saya ${nama} ingin booking pada ${jadwal}. Catatan: ${catatan}`;
-    window.open(`https://wa.me/62882020305797?text=${encodeURIComponent(pesan)}`);
-    return false;
-  }
-</script>
+  <div class="section">
+    <h2>Galeri Foto Studio</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+      <img src="assets/studio1.jpg" alt="Studio 1" style="width: 280px; border-radius: 10px;">
+      <img src="assets/studio2.jpg" alt="Studio 2" style="width: 280px; border-radius: 10px;">
+      <img src="assets/studio3.jpg" alt="Studio 3" style="width: 280px; border-radius: 10px;">
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Harga Sewa Studio & Kursus</h2>
+    <div class="price-table">
+      <table>
+        <tr><th>Layanan</th><th>Durasi</th><th>Harga</th></tr>
+        <tr><td>Sewa Studio</td><td>1 Jam</td><td>Rp 50.000</td></tr>
+        <tr><td>Sewa Studio</td><td>2 Jam</td><td>Rp 100.000 (bonus stik drum 1 pasang new)</td></tr>
+        <tr><td>Sewa Studio</td><td>1 Hari (09.00 – 17.00)</td><td>Rp 300.000 (bonus stik drum & air mineral)</td></tr>
+        <tr><td>Kursus Gitar</td><td>1x per minggu (4x sebulan)</td><td>Rp 250.000</td></tr>
+        <tr><td>Kursus Gitar untuk Pelajar</td><td>1x Pertemuan</td><td>Rp 40.000</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Form Booking Online</h2>
+    <form action="https://wa.me/62882020305797" method="get" target="_blank" onsubmit="return kirimWA()">
+      <input type="text" id="nama" placeholder="Nama Anda" required>
+      <input type="text" id="jadwal" placeholder="Tanggal & Jam Booking" required>
+      <textarea id="catatan" placeholder="Catatan Tambahan"></textarea>
+      <button type="submit">Kirim via WhatsApp</button>
+    </form>
+  </div>
+
+  <div class="section">
+    <h2>Lokasi Studio</h2>
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.5640983466477!2d114.8073062!3d-3.4459456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de68151f3b2dc68%3A0x83a0a7cf4ec0e6c2!2sMD%20Music%20Studio%20Banjarbaru!5e0!3m2!1sid!2sid!4v1716892039570" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <div class="section">
+    <h2>Testimoni Pelanggan</h2>
+    <blockquote>"Studio terbaik di Banjarbaru! Suara mantap, alat lengkap, dan nyaman banget."<br>– Riko, Banjarbaru</blockquote>
+    <blockquote>"Anak saya senang ikut kursus gitar di sini. Gurunya ramah dan profesional."<br>– Ibu Nia</blockquote>
+  </div>
+
+  <script>
+    function updateJam() {
+      const now = new Date();
+      const jam = now.getHours().toString().padStart(2, '0');
+      const menit = now.getMinutes().toString().padStart(2, '0');
+      const detik = now.getSeconds().toString().padStart(2, '0');
+      document.getElementById("jam").textContent = jam + ":" + menit + ":" + detik + " WITA";
+    }
+    setInterval(updateJam, 1000);
+    updateJam();
+
+    function kirimWA() {
+      const nama = document.getElementById('nama').value;
+      const jadwal = document.getElementById('jadwal').value;
+      const catatan = document.getElementById('catatan').value;
+      const pesan = `Halo, saya ${nama} ingin booking pada ${jadwal}. Catatan: ${catatan}`;
+      window.open(`https://wa.me/62882020305797?text=${encodeURIComponent(pesan)}`);
+      return false;
+    }
+  </script>
 </body>
 </html>
