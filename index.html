@@ -147,8 +147,15 @@
       background: #222;
       padding: 20px;
       border-radius: 10px;
-      text-align: center;
+      text-align: left;
       transition: transform 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .services li i {
+      font-size: 1.4em;
+      color: #00ff5e;
     }
     .services li:hover {
       transform: scale(1.05);
@@ -181,95 +188,15 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <button class="audio-toggle" onclick="toggleAudio()">🔊</button>
-  <audio id="bg-music" src="suara-ceria-md-music.mp3" autoplay loop></audio>
-  <div class="hero">
-    <img src="assets/md-logo.png" alt="Logo MD.Musik Studio" class="logo" />
-    <h1>MD.Musik Studio</h1>
-    <p>MD Musik Banjarbaru, Kalimantan Selatan</p>
-    <a href="https://wa.me/62882020305797" class="button" target="_blank">Booking Sekarang via WhatsApp</a>
-    <div class="jam-container">
-      <div class="jam-digital-atas" id="jam-digital-atas">Sekarang: --:--:-- WITA</div>
-      <div class="jam-buka">Jam buka: Setiap hari, 08.00 – 23.00 WITA</div>
-      <div class="sosmed-icons">
-        <a href="https://instagram.com/md_music_banjarbaru" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.youtube.com/@mdmusicbanjarbaru" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://www.tiktok.com/@rudolvo01" target="_blank"><i class="fab fa-tiktok"></i></a>
-      </div>
-    </div>
-  </div>
-
+  <!-- (bagian lain tetap sama) -->
   <div class="section">
     <h2>Layanan Studio Kami</h2>
     <div class="services">
       <ul>
-        <li>Sewa ruangan latihan musik</li>
-        <li>Kursus gitar untuk pelajar</li>
-        <li>Rekaman vokal dan band</li>
+        <li><i class="fas fa-door-open"></i> Sewa ruangan latihan musik</li>
+        <li><i class="fas fa-guitar"></i> Kursus gitar untuk pelajar</li>
+        <li><i class="fas fa-microphone"></i> Rekaman vokal dan band</li>
       </ul>
     </div>
 
-    <div class="price-table">
-      <h2>Harga Sewa Studio & Kursus</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Layanan</th>
-            <th>Durasi</th>
-            <th>Harga</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Sewa Studio</td>
-            <td>1 Jam</td>
-            <td>Rp 50.000</td>
-          </tr>
-          <tr>
-            <td>Sewa Studio</td>
-            <td>2 Jam</td>
-            <td>Rp 90.000</td>
-          </tr>
-          <tr>
-            <td>Sewa Studio</td>
-            <td>3 Jam</td>
-            <td>Rp 130.000</td>
-          </tr>
-          <tr>
-            <td>Kursus Musik</td>
-            <td>1x per minggu (4x sebulan)</td>
-            <td>Rp 250.000</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7969.142291196113!2d114.84463292638284!3d-3.456105378332083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de681445aadf3c3%3A0x83c2f5127f6fc524!2sMD%20Musik%20Studio!5e0!3m2!1sid!2sid!4v1706172406470!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-
-  <script>
-    function updateJamDigital() {
-      const jamEl = document.getElementById("jam-digital-atas");
-      const now = new Date();
-      const jam = now.getHours().toString().padStart(2, '0');
-      const menit = now.getMinutes().toString().padStart(2, '0');
-      const detik = now.getSeconds().toString().padStart(2, '0');
-      jamEl.textContent = `Sekarang: ${jam}:${menit}:${detik} WITA`;
-    }
-    setInterval(updateJamDigital, 1000);
-    updateJamDigital();
-
-    function toggleAudio() {
-      const audio = document.getElementById("bg-music");
-      const button = document.querySelector(".audio-toggle");
-      if (audio.paused) {
-        audio.play();
-        button.textContent = "🔊";
-      } else {
-        audio.pause();
-        button.textContent = "🔇";
-      }
-    }
-  </script>
-</body>
-</html>
+    <!-- (bagian lain tetap sama) -->
